@@ -13,7 +13,7 @@ public class LoginTest extends BaseClass{
 	//https://www.youtube.com/watch?v=RvwMu7tG6TA
 	
 	@Test
-	public void LoginApp() 
+	public void LoginApp() throws Throwable 
 	{	
 		try 
 		{
@@ -25,8 +25,9 @@ public class LoginTest extends BaseClass{
 			HomePage homePage = PageFactory.initElements(driver, HomePage.class);		
 			homePage.createAccount(fullName,city);
 		} 
-		catch (Throwable e) {
+		catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println("Excpetion occurred in LoginAppMethod "+ e.getMessage());
 			e.printStackTrace();
 		}						
 	}

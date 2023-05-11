@@ -37,3 +37,6 @@ public class CommonMethods {
 	}
 
 }
+
+//For the Mozilla version above 47, the geckodriver is used due to the presence of Marionette, 
+//which is the driver for automation in Mozilla. 

@@ -8,25 +8,25 @@ import java.util.Properties;
 
 public class ConfigDataProvider {
 	
-	Properties pro;
+	Properties prop;
 	
 	public ConfigDataProvider() throws Exception
 	{
 		File src = new File("./Config/Config.properties");		
 		FileInputStream iStream = new FileInputStream(src);
 		
-		pro=new Properties();		
-		pro.load(iStream);
+		prop=new Properties();		
+		prop.load(iStream);
 	}
 	
 	public String getBrowser()
 	{
-		return pro.getProperty("Browser");
+		return prop.getProperty("Browser");
 	}
 	
 	public String getUrl()
 	{
-		return pro.getProperty("Url");
+		return prop.getProperty("Url");
 	}
 
 }
